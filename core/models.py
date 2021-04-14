@@ -9,6 +9,7 @@ class Evento(models.Model):
     data_evento = models.DateTimeField(verbose_name='Data do Evento')
     create_date = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    local = models.CharField(max_length=200, verbose_name='Local do Evento')
 
     # python manage.py createsuperuser
     # python manage.py makemigrations core
